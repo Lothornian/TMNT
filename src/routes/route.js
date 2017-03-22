@@ -5,16 +5,16 @@ const router = new Router();
 
 router.get ('/', (req, res) => {
 
-  return res.json(Presidents);
+  return res.json(data);
 
 });
 
 router.route('/turtles')
       .get( (req, res) => {
 
-  let Democrats = Presidents.filter(pres => pres.party === 'Democratic');
-  return res.json(Democrats);
+  let turtles = data.filter(chars => chars.race === 'Mutant' || chars.race === 'Turtle' );
+  return res.json(turtles);
 
 });
 
-export default app;
+export default router;
