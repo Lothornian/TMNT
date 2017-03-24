@@ -1,14 +1,14 @@
 import Express from 'express';
 import Parser from 'body-parser';
 
-// import presRoutes from './routes/pres.js';
+import data from './routes/route.js';
 
 const app = Express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.use(Parser.json());
-app.use('/Charatasdfasdfhures', presRoutes);
+app.use('/chars', data);
 
-app.listen(port, () => console.log(`App start: http://localhost:3000`));
+app.listen(port, () => console.log(`App start: http://localhost:${port}`));
 
 export default app;

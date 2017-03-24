@@ -13,9 +13,7 @@ export default class extends Human{
    * @return instance of the Mutant class
    */
    constructor(name, race = "Mutant", home = "Sewer", weapon, color, pizzaTopping){
-     this.name = name;
-     this.race = race;
-     this.home = home;
+     super(name, race, home);
      this.weapon = weapon;
      this.color = color;
      this.pizzaTopping = pizzaTopping;
